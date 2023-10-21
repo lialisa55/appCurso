@@ -6,10 +6,11 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Models\Aula;
+
 class AulaController extends Controller
 {
     //abri o formulario de cadastro
-    public function mostrarFormAula(){
+    public function showFormAula(){
         return view('cad_aula');
     }
 
@@ -24,7 +25,7 @@ class AulaController extends Controller
             'urlaula'=> 'string|required',
         ]);
         //Esta linha é que grava o registro no banco
-        Categoria::create($registroAula);
+        Aula::create($registroAula);
         return Redirect::route('index');
     }
 }

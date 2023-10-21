@@ -7,9 +7,6 @@ use App\Http\Controllers\AulaController;
 
 Route::get('/',[CategoriaController::class,'index'])->name('index');
 Route::get('/cadcategoria',[CategoriaController::class,'mostrarFormCat'])->name("cadcategoria");
-
-
-//rota cadastro de categoria
 Route::post('/cadcategoria',[CategoriaController::class, 'cadastroCat'])->name('cadastro-categoria');
 
 

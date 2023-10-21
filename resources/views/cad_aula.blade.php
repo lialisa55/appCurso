@@ -18,32 +18,25 @@
               <div class="invoice-card card-style mb-30">
                 <div class="card-style mb-30 ">
                   <h6 class="mb-25 fs-4" >Cadastre o curso</h6>
-                  <form action="{{route('sendCurso')}}" method='post'>
+                  <form action="{{route('sendAula')}}" method='post'>
                   @csrf
                   <div class="input-style-1 fs-4 ">
-                    <label class="fs-4">Nome do Curso</label>
+                    <label class="fs-4">id Curso</label>
                     
-                      <input name='nomecurso' type="text" placeholder="" />
-                    
-                  </div>
-                  <div class="input-style-1 fs-4 ">
-                    <label class="fs-4">Carga Horária</label>
-                    
-                      <input name='cargahoraria' type="text" placeholder="" />
+                      <input name='idcurso' type="text" placeholder="" />
                     
                   </div>
                   <div class="input-style-1 fs-4 ">
-                    <label class="fs-4">Id da Categoria</label>
+                    <label class="fs-4">Título da aula</label>
                     
-                      <input name='idcategoria' type="text" placeholder="" />
+                      <input name='tituloaula' type="text" placeholder="" />
                     
                   </div>
                   <div class="input-style-1 fs-4 ">
-                    <label class="fs-4">Valor</label>
+                    <label class="fs-4">Url da aula</label>                    
+                      <input name='urlaula' type="text" placeholder="" />
                     
-                      <input name='valor' type="text" placeholder="" />
-                    
-                  </div>
+                  </div>                  
                   <div class="col-auto">
                     <button type="submit" class="btn btn-primary mb-3">Salvar</button>
                   </div>
