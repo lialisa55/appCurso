@@ -8,7 +8,7 @@
       <div class="row align-items-center">
         <div class="col-md-6">
           <div class="title d-flex align-items-center flex-wrap">
-            <h2 class="mr-40">Cadastrar Curso</h2>
+            <h2 class="mr-40">Cadastrar Aula</h2>
           </div>
         </div>
         <!-- Invoice Wrapper Start -->
@@ -17,24 +17,23 @@
             <div class="col-10 ">
               <div class="invoice-card card-style mb-30">
                 <div class="card-style mb-30 ">
-                  <h6 class="mb-25 fs-4" >Cadastre o curso</h6>
                   <form action="{{route('sendAula')}}" method='post'>
                   @csrf
                   <div class="input-style-1 fs-4 ">
-                    <label class="fs-4">id Curso</label>
+                    <label class="fs-4">Id do Curso</label>
                     
-                      <input name='idcurso' type="text" placeholder="" />
+                      <input name='idcurso' type="text" placeholder="6" />
                     
                   </div>
                   <div class="input-style-1 fs-4 ">
                     <label class="fs-4">Título da aula</label>
                     
-                      <input name='tituloaula' type="text" placeholder="" />
+                      <input name='tituloaula' type="text" placeholder="Ep. 1 Linkedin, Início" />
                     
                   </div>
                   <div class="input-style-1 fs-4 ">
                     <label class="fs-4">Url da aula</label>                    
-                      <input name='urlaula' type="text" placeholder="" />
+                      <input name='urlaula' type="text" placeholder="https://youtube.com/example/uytrdfwf.com" />
                     
                   </div>                  
                   <div class="col-auto">

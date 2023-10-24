@@ -25,4 +25,12 @@ class CategoriaController extends Controller
         Categoria::create($registroCat);
         return Redirect::route('index');
     }
+    public function showManipulationCategory(){
+        $registroCategoria = Categoria::All();
+
+        return view('manipula_categoria', ['registrosCategoria' => $registroCategoria]);
+    }
+    public function alterarCategoria(){
+        
+    }
 }

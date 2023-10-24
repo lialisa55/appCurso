@@ -13,19 +13,23 @@ class AulaController extends Controller
     public function showFormAula(){
         return view('cad_aula');
     }
-
-    public function index(){
-        return view('index');
-    }
     public function cadastroAula(Request $request){
         //verifica se existe algo na variável nomecategoria
         $registroAula = $request->validate([
-            'idcurso' => 'string|required',
+            'idcurso' => 'numeric|required',
             'tituloaula'=> 'string|required',
             'urlaula'=> 'string|required',
         ]);
         //Esta linha é que grava o registro no banco
         Aula::create($registroAula);
         return Redirect::route('index');
+    }
+    public function showManipulaAula(){
+        $registroAula = Aula::All();
+
+        return view('manipula_aula', ['registrosAula' => $registroAula]);
+    }
+    public function alterarAula(){
+        
     }
 }

@@ -17,31 +17,30 @@
             <div class="col-10 ">
               <div class="invoice-card card-style mb-30">
                 <div class="card-style mb-30 ">
-                  <h6 class="mb-25 fs-4" >Cadastre o curso</h6>
                   <form action="{{route('sendCurso')}}" method='post'>
                   @csrf
                   <div class="input-style-1 fs-4 ">
                     <label class="fs-4">Nome do Curso</label>
                     
-                      <input name='nomecurso' type="text" placeholder="" />
+                      <input name='nomecurso' type="text" placeholder="Linkedin como usar" />
                     
                   </div>
                   <div class="input-style-1 fs-4 ">
                     <label class="fs-4">Carga Horária</label>
                     
-                      <input name='cargahoraria' type="text" placeholder="" />
+                      <input name='cargahoraria' type="text" placeholder="15" />
                     
                   </div>
                   <div class="input-style-1 fs-4 ">
                     <label class="fs-4">Id da Categoria</label>
                     
-                      <input name='idcategoria' type="text" placeholder="" />
+                      <input name='idcategoria' type="text" placeholder="1" />
                     
                   </div>
                   <div class="input-style-1 fs-4 ">
                     <label class="fs-4">Valor</label>
                     
-                      <input name='valor' type="text" placeholder="" />
+                      <input name='valor' type="text" placeholder="200" />
                     
                   </div>
                   <div class="col-auto">

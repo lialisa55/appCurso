@@ -70,7 +70,7 @@
               <a href="{{route('cadastro-categoria')}}"> <span class="text h4">Cadastrar </span></a>
             </li>
             <li>
-              <a href="blank-page.html"> <span class="text h4">Gerenciar </span></a>
+              <a href="{{route('manipulador-categoria')}}"> <span class="text h4">Gerenciar </span></a>
             </li>
           </ul>
         </li>
@@ -93,7 +93,7 @@
               <a href="{{route('showCurso')}}"> <span class="text h4">Cadastrar </span> </a>
             </li>
             <li>
-              <a href="blank-page.html"> <span class="text h4">Gerenciar</span> </a>
+              <a href="{{route('genCurso')}}"> <span class="text h4">Gerenciar</span> </a>
             </li>
           </ul>
         </li>
@@ -116,7 +116,7 @@
               <a href="{{route('showAula')}}"> <span class="text h4">Cadastrar</span> </a>
             </li>
             <li>
-              <a href="blank-page.html"><span class="text h4"> Gerenciar</span> </a>
+              <a href="{{route('genAula')}}"><span class="text h4"> Gerenciar</span> </a>
             </li>
           </ul>
         </li>
