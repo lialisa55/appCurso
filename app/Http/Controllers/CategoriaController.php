@@ -26,12 +26,20 @@ class CategoriaController extends Controller
         return Redirect::route('index');
     }
     public function showManipulationCategory(){
-        $registroCategoria = Categoria::All();
+        $registrosCategoria = Categoria::All();
 
-        return view('manipula_categoria', ['registrosCategoria' => $registroCategoria]);
+        return view('manipula_categoria', ['registrosCategoria' => $registrosCategoria]);
     }
     public function deletarCategoria(Categoria $registroscategoria){
         $registroscategoria->delete();
         return Redirect::route('index');
+    }
+    public function buscarCategoriaNome(Request $request){
+        $registrosCategoria = Categoria::query();
+        $registrosCategoria->when($request->categoria, function($query, $valor){
+            $query->when('nomecategoria', 'like',' %'. $valor.'%');
+        });
+        $registrosCategoria = $registrosCategoria->get();
+        return view('manipula_categoria', ['registrosCategoria' => $registrosCategoria]);;
     }
 }

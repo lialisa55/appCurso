@@ -13,14 +13,19 @@ Route::post('/cadcategoria',[CategoriaController::class, 'cadastroCat'])->name('
 Route::get('/altcategoria',[CategoriaController::class, 'showManipulationCat'])->name('manipulador-categoria');
 
 Route::get('/gercategoria',[CategoriaController::class, 'showManipulationCategory'])->name('manipulador-categoria');
+
+//Rota busca nome Categoria
+Route::get('/nomecategoria}', [CategoriaController::class, 'buscarCategoriaNome'])->name('buscarcategoria');
+
 Route::put('/putcategoria/{registroscategoria}',[CategoriaController::class, 'putCategoria,'])->name('put-categoria');
 Route::delete('/delcategoria/{registroscategoria}',[CategoriaController::class, 'deletarCategoria'])->name('deletar-categoria');
 
 Route::get('/cadcurso', [CursoController::class, 'showFormCurso'])->name('showCurso');
 Route::post('/cadcurso', [CursoController::class, 'cadastroCurso'])->name('sendCurso');
 Route::get('/gencurso', [CursoController::class, 'showManipulaCurso'])->name('genCurso');
+Route::delete('/delcurso', [CursoController::class, 'deletarCurso'])->name('deletarcurso');
 
 Route::get('/cadaula', [AulaController::class, 'showFormAula'])->name('showAula');
 Route::post('/cadaula', [AulaController::class, 'cadastroAula'])->name('sendAula');
 Route::get('/genaula', [AulaController::class, 'showManipulaAula'])->name('genAula');
-
+Route::delete('/delaula', [AulaController::class, 'deletarAula'])->name('deletaraula');

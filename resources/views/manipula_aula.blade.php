@@ -67,7 +67,7 @@
                           </td>
 
                           <td>
-                            <form method="Post" Action="">
+                            <form method="Post" Action="{{route('deletaraula', $registrosAulas->id)}}">
                               @method('delete')
                               @csrf
 
