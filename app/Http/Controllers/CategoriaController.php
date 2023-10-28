@@ -30,7 +30,8 @@ class CategoriaController extends Controller
 
         return view('manipula_categoria', ['registrosCategoria' => $registroCategoria]);
     }
-    public function alterarCategoria(){
-        
+    public function deletarCategoria(Categoria $registroscategoria){
+        $registroscategoria->delete();
+        return Redirect::route('index');
     }
 }
