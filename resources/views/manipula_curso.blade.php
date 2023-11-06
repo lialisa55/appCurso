@@ -17,7 +17,7 @@
             <div class="col-10 ">
               <div class="invoice-card card-style mb-30">
                 <div class="card-style mb-30 ">
-                  <h6 class="mb-25 fs-4">Digite o nome da categoria de curso</h6>
+                  <h6 class="mb-25 fs-4">Digite o nome de curso</h6>
 
                   <section class="container m-5">
 
@@ -69,7 +69,7 @@
                           </td>
 
                           <td>
-                            <form method="Post" Action="{{route('deletarcurso', $registrosCursos->id)}}">
+                            <form method="Post" Action="{{route('deletar-curso', $registrosCursos->id)}}">
                               @method('delete')
                               @csrf
 

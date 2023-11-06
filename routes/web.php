@@ -23,9 +23,9 @@ Route::delete('/delcategoria/{registroscategoria}',[CategoriaController::class, 
 Route::get('/cadcurso', [CursoController::class, 'showFormCurso'])->name('showCurso');
 Route::post('/cadcurso', [CursoController::class, 'cadastroCurso'])->name('sendCurso');
 Route::get('/gencurso', [CursoController::class, 'showManipulaCurso'])->name('genCurso');
-Route::delete('/delcurso', [CursoController::class, 'deletarCurso'])->name('deletarcurso');
+Route::delete('/delcurso/{registroscurso}', [CursoController::class, 'deletarCurso'])->name('deletar-curso');
 
 Route::get('/cadaula', [AulaController::class, 'showFormAula'])->name('showAula');
 Route::post('/cadaula', [AulaController::class, 'cadastroAula'])->name('sendAula');
 Route::get('/genaula', [AulaController::class, 'showManipulaAula'])->name('genAula');
-Route::delete('/delaula', [AulaController::class, 'deletarAula'])->name('deletaraula');
+Route::delete('/delaula/{registrosaula}', [AulaController::class, 'deletarAula'])->name('deletarAula');

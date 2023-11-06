@@ -29,8 +29,8 @@ class AulaController extends Controller
 
         return view('manipula_aula', ['registrosAula' => $registroAula]);
     }
-    public function deletarAula(Aula $registrosAula){
-        $registrosAula->delete();
+    public function deletarAula(Aula $registrosaula){
+        $registrosaula->delete();
         return Redirect::route('index');
     }
 }
