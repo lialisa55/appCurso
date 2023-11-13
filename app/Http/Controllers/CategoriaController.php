@@ -49,17 +49,17 @@ class CategoriaController extends Controller
         $registrosCategoria = $registrosCategoria->get();
         return view('manipula_categoria', ['registrosCategoria' => $registrosCategoria]);;
     }
-    public function MostrarAlterarCategoria(Categoria $registrosCategoria)
+    public function MostrarAlterarCategoria(Categoria $registroscategoria)
     {
-        return view('altera_categoria', ['registrosCategoria' => $registrosCategoria]);
+        return view('altera_categoria', ['registrosCategoria' => $registroscategoria]);
     }
-    public function PutCategoria(Categoria $registrosCategoria, Request $request)
-    {        
+    public function PutCategoria(Categoria $registroscategoria, Request $request)
+    {
         $registrosCat = $request->validate([
             'nomecategoria' => 'string|required'
         ]);
-        $registrosCategoria->id;
-        $registrosCategoria->save($registrosCat);
+        $registroscategoria->id;
+        $registroscategoria->save($registrosCat);
         return Redirect::route('index');
     }
 }

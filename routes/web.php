@@ -17,8 +17,8 @@ Route::get('/gercategoria',[CategoriaController::class, 'showManipulationCategor
 //Rota busca nome Categoria
 Route::get('/nomecategoria}', [CategoriaController::class, 'buscarCategoriaNome'])->name('buscarcategoria');
 
-Route::get('/putcategoria/{registroCategoria}', [CategoriaController::class,'MostrarAlterarCategoria'])->name('alterar-categoria');
-Route::put('/alterarcategoria/{registrosCategoria}',[CategoriaController::class, 'putCategoria'])->name('alterar-banco-categoria');
+Route::get('/putcategoria/{registroscategoria}', [CategoriaController::class,'MostrarAlterarCategoria'])->name('alterar-categoria');
+Route::put('/alterarcategoria/{registroscategoria}',[CategoriaController::class, 'putCategoria'])->name('alterar-banco-categoria');
 
 Route::delete('/delcategoria/{registroscategoria}',[CategoriaController::class, 'deletarCategoria'])->name('deletar-categoria');
 
