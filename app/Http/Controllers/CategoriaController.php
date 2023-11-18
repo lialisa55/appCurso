@@ -47,7 +47,8 @@ class CategoriaController extends Controller
             $query->when('nomecategoria', 'like', ' %' . $valor . '%');
         });
         $registrosCategoria = $registrosCategoria->get();
-        return view('manipula_categoria', ['registrosCategoria' => $registrosCategoria]);;
+        return view('manipula_categoria', ['registrosCategoria' => $registrosCategoria]);
+        ;
     }
     public function MostrarAlterarCategoria(Categoria $registroscategoria)
     {
@@ -58,8 +59,8 @@ class CategoriaController extends Controller
         $registrosCat = $request->validate([
             'nomecategoria' => 'string|required'
         ]);
-        $registroscategoria->id;
-        $registroscategoria->save($registrosCat);
+        $registroscategoria->fill($registrosCat);
+        $registroscategoria->save();
         return Redirect::route('index');
     }
 }

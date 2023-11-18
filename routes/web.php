@@ -17,17 +17,30 @@ Route::get('/gercategoria',[CategoriaController::class, 'showManipulationCategor
 //Rota busca nome Categoria
 Route::get('/nomecategoria}', [CategoriaController::class, 'buscarCategoriaNome'])->name('buscarcategoria');
 
+
+
+
+//Rota para alterar Categoria
 Route::get('/putcategoria/{registroscategoria}', [CategoriaController::class,'MostrarAlterarCategoria'])->name('alterar-categoria');
 Route::put('/alterarcategoria/{registroscategoria}',[CategoriaController::class, 'putCategoria'])->name('alterar-banco-categoria');
+
+//Rota para alterar Curso
+Route::get('putcurso/{registroscurso}', [CursoController::class,'MostrarAlterarCurso'])->name('alterar-curso');
+Route::put('/alterarcurso/{registroscurso}', [CursoController::class,'putCurso'])->name('alterar-banco-curso');
+
+//Rota para alterar Aula
+Route::get('/putaula/{registrosaula}', [AulaController::class,'MostrarAlterarAula'])->name('alterar-aula');
+Route::put('/alteraraula/{registrosaula}', [AulaController::class,'putAula'])->name('alterar-banco-aula');
+
 
 Route::delete('/delcategoria/{registroscategoria}',[CategoriaController::class, 'deletarCategoria'])->name('deletar-categoria');
 
 Route::get('/cadcurso', [CursoController::class, 'showFormCurso'])->name('showCurso');
 Route::post('/cadcurso', [CursoController::class, 'cadastroCurso'])->name('sendCurso');
-Route::get('/gencurso', [CursoController::class, 'showManipulaCurso'])->name('genCurso');
+Route::get('/gercurso', [CursoController::class, 'showManipulaCurso'])->name('genCurso');
 Route::delete('/delcurso/{registroscurso}', [CursoController::class, 'deletarCurso'])->name('deletar-curso');
 
 Route::get('/cadaula', [AulaController::class, 'showFormAula'])->name('showAula');
 Route::post('/cadaula', [AulaController::class, 'cadastroAula'])->name('sendAula');
-Route::get('/genaula', [AulaController::class, 'showManipulaAula'])->name('genAula');
+Route::get('/geraula', [AulaController::class, 'showManipulaAula'])->name('genAula');
 Route::delete('/delaula/{registrosaula}', [AulaController::class, 'deletarAula'])->name('deletarAula');

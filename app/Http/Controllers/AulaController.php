@@ -33,4 +33,19 @@ class AulaController extends Controller
         $registrosaula->delete();
         return Redirect::route('index');
     }
+    public function MostrarAlterarAula(Aula $registrosaula)
+    {
+        return view('altera_aula', ['registrosAula' => $registrosaula]);
+    }
+    public function PutAula(Aula $registrosaula, Request $request)
+    {
+        $registrosAula = $request->validate([
+            'tituloaula' => 'string|required',
+            'urlaula' => 'string|required',
+            'idcurso' => 'required'
+        ]);
+        $registrosaula->fill($registrosAula);
+        $registrosaula->save();
+        return Redirect::route('index');
+    }
 }

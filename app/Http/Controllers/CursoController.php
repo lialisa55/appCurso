@@ -34,4 +34,20 @@ class CursoController extends Controller
         $registroscurso->delete();
         return Redirect::route('index');
     }
+    public function MostrarAlterarCurso(Curso $registroscurso)
+    {
+        return view('altera_curso', ['registros' => $registroscurso]);
+    }
+    public function PutCurso(Curso $registroscurso, Request $request)
+    {
+        $registrosCurso = $request->validate([
+            'nomecurso' => 'string|required',
+            'cargahoraria' => 'string|required',
+            'valor' => 'numeric|required',
+            'idcategoria' => 'required'
+        ]);
+        $registroscurso->fill($registrosCurso);
+        $registroscurso->save();
+        return Redirect::route('index');
+    }
 }
